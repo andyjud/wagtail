@@ -1,15 +1,11 @@
 {% extends 'layouts/blank.html' %}
 
-{% load wagtailcore_tags %}
-
-{% block class %}blog bg-black text-white{% endblock %}
-
 {% block content %} 
 
     <div class="max-w-[1600px] mx-auto px-8 py-24">
 
-        <h1>{{ page.title }}</h1>
-        {{ page.body|richtext }}
+        <h1>Blog</h1>
+        <p>This is the body</p>
 
         <div class="grid mt-8 gap-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             <article class="relative rounded-2xl border border-gray-500 hover:border-gray-400 bg-neutral-900 ">  
