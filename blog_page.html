@@ -1,0 +1,71 @@
+{% extends 'layouts/blank.html' %}
+
+{% load wagtailcore_tags %}
+
+{% block class %}blog bg-black text-white{% endblock %}
+
+{% block content %} 
+
+    <div class="max-w-[1600px] mx-auto px-8 py-24">
+
+        <h1>{{ page.title }}</h1>
+        {{ page.body|richtext }}
+
+        <div class="grid mt-8 gap-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <article class="relative rounded-2xl border border-gray-500 hover:border-gray-400 bg-neutral-900 ">  
+                <a href="" class="block p-4">
+                    <h2>Wagtail</h2>
+                    <p>The awesome open-source Python CMS</p>
+                    <p class="text-sm text-neutral-500">January 12</p>
+
+                    <figure class="mb-4">
+                        <img class="w-full rounded-lg"src="https://res.cloudinary.com/dpuzdancn/image/upload/f_auto,q_auto/v1/static/rqjdfehtdc0xoj5jpmmv">
+                    </figure>
+
+                    <span href="" class="hover:underline">Read more</span>
+                </a>
+            </article> 
+            <article class="relative rounded-2xl border border-gray-500 hover:border-gray-400 bg-neutral-900 ">  
+                <a href="" class="block p-4">
+                    <h2>Wagtail</h2>
+                    <p>The awesome open-source Python CMS</p>
+                    <p class="text-sm text-neutral-500">January 12</p>
+
+                    <figure class="mb-4">
+                        <img class="w-full rounded-lg"src="https://res.cloudinary.com/dpuzdancn/image/upload/f_auto,q_auto/v1/static/rqjdfehtdc0xoj5jpmmv">
+                    </figure>
+                    
+                    <span href="" class="hover:underline">Read more</span>
+                </a>
+            </article> 
+            <article class="relative rounded-2xl border border-gray-500 hover:border-gray-400 bg-neutral-900 ">  
+                <a href="" class="block p-4">
+                    <h2>Wagtail</h2>
+                    <p>The awesome open-source Python CMS</p>
+                    <p class="text-sm text-neutral-500">January 12</p>
+
+                    <figure class="mb-4">
+                        <img class="w-full rounded-lg"src="https://res.cloudinary.com/dpuzdancn/image/upload/f_auto,q_auto/v1/static/rqjdfehtdc0xoj5jpmmv">
+                    </figure>
+                    
+                    <span href="" class="hover:underline">Read more</span>
+                </a>
+            </article> 
+            <article class="relative rounded-2xl border border-gray-500 hover:border-gray-400 bg-neutral-900 ">  
+                <a href="" class="block p-4">
+                    <h2>Wagtail</h2>
+                    <p>The awesome open-source Python CMS</p>
+                    <p class="text-sm text-neutral-500">January 12</p>
+
+                    <figure class="mb-4">
+                        <img class="w-full rounded-lg"src="https://res.cloudinary.com/dpuzdancn/image/upload/f_auto,q_auto/v1/static/rqjdfehtdc0xoj5jpmmv">
+                    </figure>
+                    
+                    <span href="" class="hover:underline">Read more</span>
+                </a>
+            </article> 
+        </div>
+
+    </div>
+
+{% endblock %}
