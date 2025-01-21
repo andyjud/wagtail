@@ -1,0 +1,14 @@
+<div class="flex justify-center pb-6">
+    <form action="{% url 'article_search' %}" method="get" class="relative w-full lg:w-2/3">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" 
+                class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white">
+            <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd" />
+        </svg>
+        <input 
+            type="text" 
+            name="query" 
+            class="pl-12 pr-4 py-4 w-full m-auto border-gray-300 rounded-full bg-zinc-800 text-zinc-200 placeholder-zinc-500 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:border-gray-500" 
+            placeholder="Search articles ..." 
+            {% if search_query %} value="{{ search_query }}"{% endif %}>
+    </form>
+</div>
