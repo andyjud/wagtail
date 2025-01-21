@@ -8,6 +8,7 @@
             type="text" 
             name="query" 
             class="pl-12 pr-4 py-4 w-full m-auto border-gray-300 rounded-full bg-zinc-800 text-zinc-200 placeholder-zinc-500 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:border-gray-500" 
-            placeholder="Search articles ..." >
+            placeholder="Search articles ..." 
+        >
     </form>
 </div>
