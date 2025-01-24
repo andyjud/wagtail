@@ -17,3 +17,7 @@ python manage.py makemigrations<br/>
 python manage.py migrate <br/>
 python manage.py runserver <br/>
 <br/>
+
+##### Indexing:
+python manage.py update_index<br/>
+<br/>
