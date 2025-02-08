@@ -1,0 +1,8 @@
+{% if page %}
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:description" content="{{ page.intro }}" />
+  <meta property="og:image" content="{{ page.image_url }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+{% endif %}
