@@ -41,6 +41,27 @@ class ArticlePage(Page):
     
     tags = ClusterTaggableManager(through='ArticleTag', blank=True)
     
+    views = models.PositiveIntegerField(default=0, editable=False)
+    
+    def increment_view_count(self):
+        self.views += 1
+        self.save(update_fields=["views"])
+        
+    def serve(self, request):
+        session_key = f'article_viewed_{self.pk}'
+        if not request.session.get(session_key, False):
+            self.increment_view_count()
+            request.session[session_key] = True
+        return super().serve(request)
+    
+    def image_url(self):
+        return self.image.get_rendition('fill-1200x675|jpegquality-80').url
+    
+    def get_context(self, request):
+        context = super().get_context(request)
+        context["image_url"] = self.image_url()
+        return context
+    
     def get_tags(self):
         return ", ".join(tag.name for tag in self.tags.all())
     
